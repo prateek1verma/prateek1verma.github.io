@@ -1,17 +1,23 @@
-# Prateek Verma — Academic Website (Jekyll)
+# Personal Website
 
-A minimal, academic site for GitHub Pages.
+This repository contains the source code for my personal website, hosted via [GitHub Pages](https://pages.github.com).
 
-## Quick start
-1. Create a repository named `<username>.github.io`.
-2. Copy this tree into the repo. Commit and push to `main`.
-3. In **Settings → Pages**, select the `main` branch (root). Enable **Enforce HTTPS**.
-4. Update `_config.yml` (site URLs, socials). Replace `/assets/PrateekVerma_CV.pdf` with your CV.
-5. Edit `_data/publications.yml` to add/update publications.
+## 🌐 Live Website
+[Visit Here](https://prateek1verma.github.io)  
 
-## Local preview
-```bash
-bundle install
-bundle exec jekyll serve
-```
-Visit http://127.0.0.1:4000.
+## 📖 About
+This website serves as my digital portfolio and blog. It includes:
+- Research interests
+- Projects and publications
+- Blog posts
+- Contact information
+
+## ⚙️ Tech Stack
+- **HTML5 / CSS3 / JavaScript**
+- **Jekyll** (for static site generation, if used)
+- **GitHub Pages** (for hosting)
+
+## 🚀 Setup & Deployment
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/prateek1verma/prateek1verma.github.io.git
