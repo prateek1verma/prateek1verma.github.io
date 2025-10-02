@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prateek Verma — Academic Profile</title>
+  <meta name="description" content="Prateek Verma — Assistant Project Scientist, UC Berkeley. Mathematical modelling of gene drives, eco‑evolutionary dynamics, and complex systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0e14; --card:#111827; --muted:#94a3b8; --text:#e5e7eb; --accent:#38bdf8; --accent-2:#22d3ee; --border:#1f2937;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;backdrop-filter:saturate(150%) blur(8px);background:rgba(11,14,20,.75);border-bottom:1px solid var(--border);z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .navlinks a{margin-left:16px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:40px 24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 10px 24px rgba(0,0,0,.2)}
+    h1{font-size:36px;margin:0 0 8px}
+    h2{font-size:22px;margin:0 0 12px}
+    h3{font-size:18px;margin:18px 0 8px}
+    p{line-height:1.65;color:#d1d5db}
+    ul{margin:0;padding-left:20px}
+    li{margin:6px 0}
+    .pill{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;margin:4px 6px 0 0;background:#0f172a}
+    .grid{display:grid;gap:16px}
+    .grid.two{grid-template-columns:1fr 1fr}
+    .grid.three{grid-template-columns:repeat(3,1fr)}
+    .footer{color:var(--muted);font-size:14px;padding:24px 0;border-top:1px solid var(--border);margin-top:32px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001015;font-weight:600}
+    .btn:hover{text-decoration:none;filter:saturate(120%)}
+    @media (max-width:860px){
+      .hero{grid-template-columns:1fr}
+      .grid.two{grid-template-columns:1fr}
+      .grid.three{grid-template-columns:1fr}
+    }
+    section{scroll-margin-top:72px}
+    code{background:#0f172a;padding:2px 6px;border-radius:6px;border:1px solid var(--border)}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <div class="brand">Prateek Verma</div>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#projects">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section id="about" class="hero">
+      <div class="card">
+        <h1>Assistant Project Scientist, UC&nbsp;Berkeley</h1>
+        <p>
+          I develop mathematical models and computational tools for the genetic control of mosquito vectors and the diseases they transmit. Previously, I worked at the Helmholtz Institute for Functional Marine Biodiversity (University of Oldenburg) and the Max Planck Institute for Evolutionary Biology. My interests span gene drives, eco‑evolutionary dynamics, microbial competition, evolutionary game theory, and optimal control.
+        </p>
+        <div>
+          <span class="pill">Gene Drives</span>
+          <span class="pill">Mathematical Modelling</span>
+          <span class="pill">Eco‑evolutionary Dynamics</span>
+          <span class="pill">Optimal Control</span>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn" href="https://drive.google.com/file/d/" target="_blank" rel="noopener">Download CV</a>
+          <a href="https://scholar.google.com/citations?user=2RaZWAkAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://www.marshalllab.com/people.html" target="_blank" rel="noopener">Marshall Lab</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>At a glance</h2>
+        <ul>
+          <li>Research areas: gene drive dynamics, resistance evolution, mating systems, network effects.</li>
+          <li>Methods: dynamical systems, stochastic & spatial models, simulation, optimal control.</li>
+          <li>Applications: vector‑borne disease control, agriculture, conservation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="grid two">
+      <div class="card">
+        <h2>Optimal Control in Hybrid Ecological‑Economic Systems</h2>
+        <p>
+          Identifying optimal policies to protect ecosystems that provide critical services when subject to abrupt regime shifts and uncertainty; integrates Value‑of‑Information into dynamic decision‑making.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Gene Drive</h2>
+        <p>
+          Modelling the spread, confinement, and resistance evolution of synthetic gene drives; assessing ecological and regulatory risks through deterministic, stochastic, and spatial models.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Microbial Competition</h2>
+        <p>
+          Spatial models of antibiotic‑producing, non‑producing, and sensitive strains to understand coexistence conditions and evolution of production rates.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Bribery Games</h2>
+        <p>
+          Evolutionary game‑theoretic analysis of harassment bribery on inter‑dependent networks; interplay of topology, connectivity, and update rules.
+        </p>
+      </div>
+    </section>
+
+    <section id="publications" class="card" style="margin-top:16px">
+      <h2>Selected Publications</h2>
+      <ul>
+        <li>Verma P, Sengupta S (2015). Bribe and punishment: An evolutionary game‑theoretic analysis of bribery. <em>PLoS ONE</em> 10(7): e0133441. <a href="https://doi.org/10.1371/journal.pone.0133441" target="_blank" rel="noopener">DOI</a></li>
+        <li>Verma P, Nandi AK, Sengupta S (2017). Bribery games on inter‑dependent regular networks. <em>Scientific Reports</em> 7: 42735. <a href="https://doi.org/10.1038/srep42735" target="_blank" rel="noopener">DOI</a></li>
+        <li>Verma P, Nandi AK, Sengupta S (2018). Bribery games on interdependent complex networks. <em>Journal of Theoretical Biology</em> 450: 43–52. <a href="https://doi.org/10.1016/j.jtbi.2018.04.011" target="_blank" rel="noopener">DOI</a></li>
+        <li>Kosakowski J, Verma P, Sengupta S, Higgs PG (2018). The evolution of antibiotic production rate in a spatial model of bacterial competition. <em>PLoS ONE</em> 13(10): e0205202. <a href="https://doi.org/10.1371/journal.pone.0205202" target="_blank" rel="noopener">DOI</a></li>
+        <li>Pathak S, Verma P, Ram SK, Sengupta S (2020). How strategy environment and wealth shape altruistic behaviour. <em>Proceedings of the Royal Society B</em> 287(1941): 20202250. <a href="https://doi.org/10.1098/rspb.2020.2250" target="_blank" rel="noopener">DOI</a></li>
+        <li>Verma P, Reeves RG, Gokhale CS (2021). A common gene drive language eases regulatory process and eco‑evolutionary extensions. <em>BMC Ecology and Evolution</em> 21: 156. <a href="https://doi.org/10.1186/s12862-021-01881-y" target="_blank" rel="noopener">DOI</a></li>
+        <li>Verma P, Reeves RG, Simon S, Otto M, Gokhale CS (2022). The effect of mating complexity on gene drive dynamics. <em>American Naturalist</em> 201(1): E1–E22. <a href="https://doi.org/10.1086/722157" target="_blank" rel="noopener">DOI</a></li>
+        <li>Mikaberidze A, Gokhale CS, Bargués‑Ribera M, Verma P (2025). The cost of fungicide resistance evolution in multi‑field plant epidemics. <em>PLOS Sustainability and Transformation</em> 4(6): e0000178. <a href="https://doi.org/10.1371/journal.pstr.0000178" target="_blank" rel="noopener">DOI</a></li>
+        <li>Luhede A, Verma P, Upmann T (2025). Value of Information analysis for marine conservation decision making. <em>Environmental Science & Policy</em> 171: 104164. <a href="https://doi.org/10.1016/j.envsci.2025.104164" target="_blank" rel="noopener">DOI</a></li>
+      </ul>
+      <p style="margin-top:14px;color:var(--muted)">Full list, reports, and preprints available on Google Scholar.</p>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:16px">
+      <h2>Contact</h2>
+      <p><strong>Address:</strong> School of Public Health, 2121 Berkeley Way #5321‑04, UC Berkeley, Berkeley, CA 94720‑7360, USA</p>
+      <p><strong>Email:</strong> prateekverma [at] berkeley [dot] edu</p>
+      <p>
+        <a href="https://www.linkedin.com/in/prateek1science" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="https://scholar.google.com/citations?user=2RaZWAkAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
+        <a href="https://www.researchgate.net/profile/Prateek-Verma-16" target="_blank" rel="noopener">ResearchGate</a>
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Prateek Verma · Last updated automatically by GitHub Pages build.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
