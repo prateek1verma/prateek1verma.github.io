@@ -10,39 +10,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0e14; --card:#111827; --muted:#94a3b8; --text:#e5e7eb; --accent:#38bdf8; --accent-2:#22d3ee; --border:#1f2937;
+      --bg:#f7f8fb; /* light greyish */
+      --card:#ffffff; 
+      --muted:#475569; 
+      --text:#1f2937; 
+      --brand:rgb(63,77,95);         /* #3F4D5F */
+      --brand-2:rgb(89,102,120);     /* a lighter tone */
+      --border:#e5e7eb;
+      --shadow:0 8px 24px rgba(63,77,95,.12);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);}
-    a{color:var(--accent);text-decoration:none}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:980px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(150%) blur(8px);background:rgba(11,14,20,.75);border-bottom:1px solid var(--border);z-index:10}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:10;background:var(--brand);color:#fff;border-bottom:1px solid rgba(255,255,255,.15);box-shadow:0 2px 12px rgba(63,77,95,.25);}
     nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px}
-    .brand{font-weight:700;letter-spacing:.3px}
-    .navlinks a{margin-left:16px}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding:40px 24px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 10px 24px rgba(0,0,0,.2)}
-    h1{font-size:36px;margin:0 0 8px}
+    .brand{font-weight:700;letter-spacing:.3px;color:#fff}
+    .navlinks a{margin-left:16px;color:#eef2f7}
+    .navlinks a:hover{opacity:.9}
+
+    /* Layout */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:36px 24px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+    h1{font-size:38px;margin:0 0 8px}
     h2{font-size:22px;margin:0 0 12px}
     h3{font-size:18px;margin:18px 0 8px}
-    p{line-height:1.65;color:#d1d5db}
+    p{line-height:1.7;color:#334155}
     ul{margin:0;padding-left:20px}
     li{margin:6px 0}
-    .pill{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;margin:4px 6px 0 0;background:#0f172a}
+    .pill{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;margin:4px 6px 0 0;background:#f1f5f9;color:#0f172a}
     .grid{display:grid;gap:16px}
     .grid.two{grid-template-columns:1fr 1fr}
-    .grid.three{grid-template-columns:repeat(3,1fr)}
     .footer{color:var(--muted);font-size:14px;padding:24px 0;border-top:1px solid var(--border);margin-top:32px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001015;font-weight:600}
-    .btn:hover{text-decoration:none;filter:saturate(120%)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;font-weight:600;box-shadow:0 6px 16px rgba(63,77,95,.25)}
+    .btn:hover{text-decoration:none;filter:saturate(110%)}
     @media (max-width:860px){
       .hero{grid-template-columns:1fr}
       .grid.two{grid-template-columns:1fr}
-      .grid.three{grid-template-columns:1fr}
     }
     section{scroll-margin-top:72px}
-    code{background:#0f172a;padding:2px 6px;border-radius:6px;border:1px solid var(--border)}
+
+    /* Decorative helix + math motif */
+    .motif{position:relative}
+    .motif svg{width:100%;height:auto}
+    .ring{position:absolute;inset:auto 0 0 0;height:180px;background:radial-gradient(ellipse at 50% 0%, rgba(63,77,95,.12), rgba(63,77,95,0));filter:blur(1px);}
   </style>
 </head>
 <body>
@@ -51,7 +65,7 @@
       <div class="brand">Prateek Verma</div>
       <div class="navlinks">
         <a href="#about">About</a>
-        <a href="#projects">Research</a>
+        <a href="#focus">Research Focus</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
@@ -59,11 +73,12 @@
   </header>
 
   <main class="wrap">
+    <!-- HERO -->
     <section id="about" class="hero">
       <div class="card">
         <h1>Assistant Project Scientist, UC&nbsp;Berkeley</h1>
         <p>
-          I develop mathematical models and computational tools for the genetic control of mosquito vectors and the diseases they transmit. Previously, I worked at the Helmholtz Institute for Functional Marine Biodiversity (University of Oldenburg) and the Max Planck Institute for Evolutionary Biology. My interests span gene drives, eco‑evolutionary dynamics, microbial competition, evolutionary game theory, and optimal control.
+          I develop mathematical models and computational tools for the genetic control of mosquito vectors and the diseases they transmit. My work spans gene drives, resistance evolution, mating systems, and eco‑evolutionary dynamics.
         </p>
         <div>
           <span class="pill">Gene Drives</span>
@@ -72,48 +87,70 @@
           <span class="pill">Optimal Control</span>
         </div>
         <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn" href="https://drive.google.com/file/d/1Wo4hywmzVgqNEcnJQYxmT3SECWxw3Q2I/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn" href="https://drive.google.com/file/d/" target="_blank" rel="noopener">Download CV</a>
           <a href="https://scholar.google.com/citations?user=2RaZWAkAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
           <a href="https://www.marshalllab.com/people.html" target="_blank" rel="noopener">Marshall Lab</a>
         </div>
       </div>
+      <div class="motif">
+        <div class="ring"></div>
+        <!-- Simple DNA helix + math glyphs (inline SVG) -->
+        <svg viewBox="0 0 420 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0%" stop-color="rgba(63,77,95,0.85)"/>
+              <stop offset="100%" stop-color="rgba(89,102,120,0.85)"/>
+            </linearGradient>
+          </defs>
+          <!-- Helix ladders -->
+          <g fill="none" stroke="url(#g)" stroke-width="2">
+            <path d="M40 40 C 120 120, 60 220, 140 300 S 80 420, 160 520"/>
+            <path d="M200 40 C 120 120, 180 220, 100 300 S 160 420, 80 520"/>
+          </g>
+          <!-- Rungs -->
+          <g stroke="rgba(63,77,95,.5)">
+            <line x1="60" y1="80" x2="180" y2="90"/>
+            <line x1="70" y1="140" x2="170" y2="150"/>
+            <line x1="80" y1="200" x2="160" y2="210"/>
+            <line x1="90" y1="260" x2="150" y2="270"/>
+            <line x1="100" y1="320" x2="140" y2="330"/>
+          </g>
+          <!-- Math glyphs -->
+          <g fill="rgba(63,77,95,.7)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22">
+            <text x="230" y="80">∂x/∂t = f(x, t)</text>
+            <text x="230" y="130">ℛ₀ &gt; 1 ⇒ spread</text>
+            <text x="230" y="180">pₜ₊₁ = T(pₜ)</text>
+            <text x="230" y="230">E[τ] ≈ 1/λ</text>
+            <text x="230" y="280">DΔt u = Au + g</text>
+            <text x="230" y="330">⇌ selection · migration</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- FOCUS AREA CALLOUTS (replaces Projects) -->
+    <section id="focus" class="grid two" style="margin-top:8px">
       <div class="card">
-        <h2>At a glance</h2>
+        <h2>Gene Drive Research</h2>
+        <p>Dynamics of spread, confinement, and resistance under realistic mating systems and population structure.</p>
         <ul>
-          <li>Research areas: gene drive dynamics, resistance evolution, mating systems, network effects.</li>
-          <li>Methods: dynamical systems, stochastic & spatial models, simulation, optimal control.</li>
-          <li>Applications: vector‑borne disease control, agriculture, conservation.</li>
+          <li>Deterministic, stochastic, and spatial models</li>
+          <li>Resistance emergence &amp; management</li>
+          <li>Risk assessment and regulatory‑relevant scenarios</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Mathematical Modelling</h2>
+        <p>Tools across eco‑evolutionary dynamics and control.</p>
+        <ul>
+          <li>Dynamical systems &amp; branching processes</li>
+          <li>Optimal control &amp; Value‑of‑Information</li>
+          <li>Inference &amp; simulation pipelines</li>
         </ul>
       </div>
     </section>
 
-    <section id="projects" class="grid two">
-      <div class="card">
-        <h2>Optimal Control in Hybrid Ecological‑Economic Systems</h2>
-        <p>
-          Identifying optimal policies to protect ecosystems that provide critical services when subject to abrupt regime shifts and uncertainty; integrates Value‑of‑Information into dynamic decision‑making.
-        </p>
-      </div>
-      <div class="card">
-        <h2>Gene Drive</h2>
-        <p>
-          Modelling the spread, confinement, and resistance evolution of synthetic gene drives; assessing ecological and regulatory risks through deterministic, stochastic, and spatial models.
-        </p>
-      </div>
-      <div class="card">
-        <h2>Microbial Competition</h2>
-        <p>
-          Spatial models of antibiotic‑producing, non‑producing, and sensitive strains to understand coexistence conditions and evolution of production rates.
-        </p>
-      </div>
-      <div class="card">
-        <h2>Bribery Games</h2>
-        <p>
-          Evolutionary game‑theoretic analysis of harassment bribery on inter‑dependent networks; interplay of topology, connectivity, and update rules.
-        </p>
-      </div>
-    </section>
-
+    <!-- PUBLICATIONS -->
     <section id="publications" class="card" style="margin-top:16px">
       <h2>Selected Publications</h2>
       <ul>
@@ -125,11 +162,12 @@
         <li>Verma P, Reeves RG, Gokhale CS (2021). A common gene drive language eases regulatory process and eco‑evolutionary extensions. <em>BMC Ecology and Evolution</em> 21: 156. <a href="https://doi.org/10.1186/s12862-021-01881-y" target="_blank" rel="noopener">DOI</a></li>
         <li>Verma P, Reeves RG, Simon S, Otto M, Gokhale CS (2022). The effect of mating complexity on gene drive dynamics. <em>American Naturalist</em> 201(1): E1–E22. <a href="https://doi.org/10.1086/722157" target="_blank" rel="noopener">DOI</a></li>
         <li>Mikaberidze A, Gokhale CS, Bargués‑Ribera M, Verma P (2025). The cost of fungicide resistance evolution in multi‑field plant epidemics. <em>PLOS Sustainability and Transformation</em> 4(6): e0000178. <a href="https://doi.org/10.1371/journal.pstr.0000178" target="_blank" rel="noopener">DOI</a></li>
-        <li>Luhede A, Verma P, Upmann T (2025). Value of Information analysis for marine conservation decision making. <em>Environmental Science & Policy</em> 171: 104164. <a href="https://doi.org/10.1016/j.envsci.2025.104164" target="_blank" rel="noopener">DOI</a></li>
+        <li>Luhede A, Verma P, Upmann T (2025). Value of Information analysis for marine conservation decision making. <em>Environmental Science &amp; Policy</em> 171: 104164. <a href="https://doi.org/10.1016/j.envsci.2025.104164" target="_blank" rel="noopener">DOI</a></li>
       </ul>
       <p style="margin-top:14px;color:var(--muted)">Full list, reports, and preprints available on Google Scholar.</p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="card" style="margin-top:16px">
       <h2>Contact</h2>
       <p><strong>Address:</strong> School of Public Health, 2121 Berkeley Way #5321‑04, UC Berkeley, Berkeley, CA 94720‑7360, USA</p>
